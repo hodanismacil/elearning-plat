@@ -2,7 +2,7 @@ import { Button } from "../../ui/button";
 import sawir from "../../../assets/sawir.png";
 import { BookOpen,  Stamp, Star, Users } from "lucide-react";
 
-const Horosetion = () => {
+const Home = () => {
   const courses = [
   {
     title: "Frontend Development",
@@ -96,7 +96,7 @@ const Horosetion = () => {
   <div className="max-w-6xl mx-auto px-6">
 
     {/* Title */}
-    <h2 className="text-3xl font-bold text-center mb-12">
+    <h2 className="text-3xl text-amber-300 font-bold text-center mb-12">
       Popular Courses
     </h2>
 
@@ -128,13 +128,13 @@ const Horosetion = () => {
             </p>
 
             <div className="flex justify-between items-center">
-              <span className="text-purple-600 font-bold">
+              <span className="text-amber-600 font-bold">
                
                 {course.price}
 
               </span>
 
-              <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700">
+              <button className="bg-amber-600 text-white px-4 py-2 rounded-lg hover:bg-amber-700">
                 Enroll
               </button>
             </div>
@@ -299,4 +299,4 @@ const Horosetion = () => {
   );
 };
 
-export default Horosetion;
+export default Home;
