@@ -1,8 +1,32 @@
 import { Button } from "../../ui/button";
 import sawir from "../../../assets/sawir.png";
-import { BookOpen, Stamp, Star, Users } from "lucide-react";
+import { BookOpen,  Stamp, Star, Users } from "lucide-react";
 
 const Horosetion = () => {
+  const courses = [
+  {
+    title: "Frontend Development",
+    instructor: "Frontend Development",
+    price: "$49",
+    image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+    description: "Learn HTML, CSS, JavaScript and React from scratch."
+  },
+  {
+    title: "UI/UX Design",
+    instructor: "UI/UX Design",
+    image: "https://plus.unsplash.com/premium_photo-1733306548826-95daff988ae6?q=80&w=1212&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    price: "$39",
+    description: "Master the art of user interface and user experience design."
+
+  },
+  {
+    title: "Digital Marketing",
+    instructor: "Digital Marketing",
+    price: "$29",
+    image: "https://media.istockphoto.com/id/1148508378/photo/abstract-blue-and-orange-digital-binary-code-matrix-background-with-flare-futuristic-big-data.jpg?s=2048x2048&w=is&k=20&c=fDIzXxiVk_R4TMReSAwtSWZX4eSqH5yLf7a6UJdu3J0=",
+    description: "Learn SEO, social media marketing, and online advertising strategies."
+  },
+];
   return (
     <div className="bg-gray-100 min-h-screen  items-center">
   <section className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -65,6 +89,63 @@ const Horosetion = () => {
         We provide a unique learning experience with expert instructors, interactive content, and a supportive community.
       </p>
     </div>
+    
+    
+
+<div className="py-16 bg-gray-50">
+  <div className="max-w-6xl mx-auto px-6">
+
+    {/* Title */}
+    <h2 className="text-3xl font-bold text-center mb-12">
+      Popular Courses
+    </h2>
+
+    {/* Courses Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      {courses.map((course, index) => (
+        <div
+          key={index}
+          className="bg-white rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition"
+        >
+          <img
+            src={course.image}
+            alt={course.title}
+            className="w-full h-48 object-cover"
+          />
+
+          <div className="p-6">
+            <h3 className="text-xl font-semibold mb-2">
+              {course.title}
+
+            </h3>
+
+            <p className="text-gray-500 text-sm mb-4">
+               {course.instructor}
+            </p>
+            <p className="text-gray-700 mb-6">
+              {course.description}
+            </p>
+
+            <div className="flex justify-between items-center">
+              <span className="text-purple-600 font-bold">
+               
+                {course.price}
+
+              </span>
+
+              <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700">
+                Enroll
+              </button>
+            </div>
+          </div>
+        </div>
+      ))}
+
+    </div>
+  </div>
+</div>
+
   </section>
 <section className="bg-gray-100 py-16">
     <div className="max-w-7xl mx-auto px-6">
