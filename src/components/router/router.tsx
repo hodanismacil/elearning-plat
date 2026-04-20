@@ -11,6 +11,7 @@ import AdminDashboard from "../dashbourd/admindashbourd";
 import Login from "../login/login";
 import Footer from "../footer/footer";
 
+
 // Layout
 const Router = () => {
   return (
@@ -65,6 +66,10 @@ export const router = createBrowserRouter([
           {
             path: 'courses',
             element: <Courses />
+          },
+          {
+            path:"Progress",
+            element:<progress/>
           }
         ]
       }
