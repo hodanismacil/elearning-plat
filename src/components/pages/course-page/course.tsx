@@ -1,4 +1,4 @@
-import { Navigate } from "react-router-dom";
+
 
 const Course = () => {
   const courses = [
@@ -59,7 +59,7 @@ const Course = () => {
           {courses.map((course) => (
             <div
               key={course.id}
-              // onClick={() => Navigate(`/course/${course.id}`)}
+            
               className="bg-white p-6 rounded-2xl shadow hover:shadow-xl cursor-pointer transition"
             >
               <img
